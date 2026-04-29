@@ -1,0 +1,19 @@
+{
+  "name": "Эксперт пищевой безопасности",
+  "short_name": "ЭПБ",
+  "description": "Разработка ХАССП, аудиты, подготовка к проверкам Роспотребнадзора и аудитам торговых сетей.",
+  "start_url": "/",
+  "display": "browser",
+  "lang": "ru",
+  "background_color": "#0B0805",
+  "theme_color": "#0B0805",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo-mark.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
