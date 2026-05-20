@@ -282,29 +282,6 @@
     position: relative;
     z-index: 1;
   }
-  .hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 16px;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    color: var(--gold-light);
-    text-transform: uppercase;
-    margin-bottom: 28px;
-    background: rgba(243, 126, 31, 0.05);
-  }
-  .hero-eyebrow::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-    box-shadow: 0 0 12px var(--gold);
-  }
   .hero h1 {
     font-family: var(--serif);
     font-size: clamp(40px, 5.5vw, 76px);
@@ -460,47 +437,6 @@
     font-size: 12px;
     font-weight: 700;
     flex-shrink: 0;
-  }
-
-  /* ============ STATS STRIP ============ */
-  .stats {
-    border-top: 1px solid var(--border-soft);
-    border-bottom: 1px solid var(--border-soft);
-    padding: 60px 0;
-    background: var(--bg-1);
-  }
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-  }
-  .stat {
-    text-align: center;
-    padding: 0 16px;
-    position: relative;
-  }
-  .stat:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: -20px;
-    top: 20%;
-    bottom: 20%;
-    width: 1px;
-    background: var(--border-soft);
-  }
-  .stat-num {
-    font-family: var(--serif);
-    font-size: 56px;
-    font-weight: 600;
-    line-height: 1;
-    color: var(--gold);
-    letter-spacing: -0.02em;
-    margin-bottom: 12px;
-  }
-  .stat-label {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.4;
   }
 
   /* ============ SECTIONS ============ */
@@ -1695,7 +1631,6 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-content">
-        <div class="hero-eyebrow">Эксперт пищевой безопасности с 2014 года</div>
         <h1>Подготовим к проверкам <span class="accent">Роспотребнадзора</span> и аудитам <span class="accent">торговых сетей</span></h1>
         <p class="hero-subtitle">
           Работаем с предприятиями общественного питания и пищевыми производствами.
@@ -1713,21 +1648,20 @@
           <div class="hero-trust-item">
             <div class="hero-trust-icon">✓</div>
             <div class="hero-trust-text">
-              <strong>Гарантия в договоре</strong>
-              Прохождение проверок
+              <strong>Работаем по всей Росии</strong>
             </div>
           </div>
           <div class="hero-trust-item">
             <div class="hero-trust-icon">★</div>
             <div class="hero-trust-text">
-              <strong>350+ предприятий</strong>
+              <strong>100+ предприятий</strong>
               Среди клиентов
             </div>
           </div>
           <div class="hero-trust-item">
             <div class="hero-trust-icon">⏱</div>
             <div class="hero-trust-text">
-              <strong>От 14 дней</strong>
+              <strong>От 30 дней</strong>
               Срок внедрения
             </div>
           </div>
@@ -1766,30 +1700,6 @@
   </div>
 </section>
 
-<!-- ============ STATS ============ -->
-<section class="stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat">
-        <div class="stat-num">350+</div>
-        <div class="stat-label">Внедрённых систем ХАССП</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">12</div>
-        <div class="stat-label">Лет на рынке консалтинга</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Прохождение проверок</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">7</div>
-        <div class="stat-label">Регионов России</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ SERVICES ============ -->
 <section class="section services" id="services">
   <div class="container">
@@ -1797,8 +1707,7 @@
       <div class="section-eyebrow">Наши услуги</div>
       <h2 class="section-title">Полный спектр услуг <span class="accent">по пищевой безопасности</span></h2>
       <p class="section-subtitle">
-        Закрываем все задачи — от разработки документов и аудита до поставок инвентаря
-        и установки систем безопасности на предприятии.
+          Закрываем все задачи - от внешнего аудита, разработки документации и внедрения процессов до сопровождения во время проверок, поставки моющих средств, инвентаря и внедрения систем безопасности на предприятии.
       </p>
     </div>
 
@@ -1877,7 +1786,7 @@
         <h3 class="service-title">Программа производственного контроля</h3>
         <p class="service-desc">
           Один из первых документов, которые запрашивают контролирующие органы.
-          Разработаем под специфику вашего производства, ассортимент и&nbsp;процессы.
+          Разработаем под специфику вашего производства, ассортимента и&nbsp;технологических&nbsp;процессов.
         </p>
       </article>
 
@@ -2033,7 +1942,7 @@
         <div class="industry-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3h18l-2 7H5z"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/><path d="M5 10l1 7h12l1-7"/></svg>
         </div>
-        <h3 class="industry-title">Магазины и базы</h3>
+        <h3 class="industry-title">Пит-стопы и кофейни</h3>
         <p class="industry-desc">Продуктовая розница, опт, склады, дистрибьюция</p>
       </div>
       <div class="industry reveal">
@@ -2075,7 +1984,7 @@
       <div class="process-step reveal">
         <div class="process-step-num">02</div>
         <h4 class="process-step-title">Аудит производства</h4>
-        <p class="process-step-desc">Выезд эксперта, анализ опасностей и рисков на месте</p>
+        <p class="process-step-desc">Выезд эксперта или видео-сопровождение</p>
       </div>
       <div class="process-step reveal">
         <div class="process-step-num">03</div>
@@ -2254,7 +2163,7 @@
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
-          <p>В среднем — от 14 до 30 рабочих дней. Срок зависит от размера предприятия, количества технологических линий и&nbsp;ассортимента продукции. На первой консультации мы фиксируем точный срок в&nbsp;коммерческом предложении.</p>
+          <p>В среднем — от 30 рабочих дней. Срок зависит от масштаба предприятия, количества производственных линий и ассортимента выпускаемой продукции. Точные сроки фиксируем после первичной консультации и отражаем в коммерческом предложении.</p>
         </div>
       </div>
 
@@ -2264,7 +2173,8 @@
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
-          <p>Стоимость зависит от типа предприятия: для небольшого кафе — от 35&nbsp;000&nbsp;₽, для пищевого производства среднего размера — от 90&nbsp;000&nbsp;₽. Точную цену называем после короткого аудита, обычно бесплатного.</p>
+          <p>Стоимость зависит от формата предприятия, производственных процессов и объема работ. Точную стоимость определяем после первичной консультации или аудита.
+              Возможен онлайн-аудит предприятия в формате видеосозвона.</p>
         </div>
       </div>
 
@@ -2284,7 +2194,8 @@
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
-          <p>Согласно ТР&nbsp;ТС&nbsp;021/2011, наличие системы ХАССП обязательно для всех предприятий, которые производят, перерабатывают, хранят, перевозят или реализуют пищевую продукцию. Это касается ресторанов, кафе, столовых, производств, магазинов и&nbsp;складов.</p>
+          <p>Согласно ТР&nbsp;ТС&nbsp;021/2011, система ХАССП обязательна для предприятий, деятельность которых связана с производством, хранением и реализацией пищевой продукции.
+              Требование распространяется на пищевые производства, рестораны, кафе, кофейни, пекарни, столовые, кейтеринг  и пит-стопы.</p>
         </div>
       </div>
 
@@ -2294,7 +2205,9 @@
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
-          <p>Штрафы по ст.&nbsp;14.43 КоАП РФ: для должностных лиц — от 10&nbsp;000 до 20&nbsp;000&nbsp;₽, для ИП — от 20&nbsp;000 до 30&nbsp;000&nbsp;₽, для юридических лиц — от 100&nbsp;000 до 300&nbsp;000&nbsp;₽. При повторных нарушениях — приостановка деятельности до 90&nbsp;суток.</p>
+          <p>За отсутствие системы ХАССП или формальный подход к ее внедрению предусмотрена ответственность по Статья&nbsp;14.43&nbsp;КоАП&nbsp;РФ.
+              Нарушения могут привести к штрафам, предписаниям, внеплановым проверкам и приостановке деятельности предприятия до 90 суток.
+              Корректно внедренная система ХАССП помогает снизить риски нарушений и повысить готовность к проверкам Роспотребнадзора и аудитам торговых сетей.</p>
         </div>
       </div>
 
@@ -2317,7 +2230,7 @@
     <div class="contact-grid">
       <div class="contact-info reveal">
         <div class="section-eyebrow">Связаться с нами</div>
-        <h2 class="section-title">Оставьте заявку — <span class="accent">перезвоним</span> в течение 30 минут</h2>
+        <h2 class="section-title">Оставьте заявку — <span class="accent">перезвоним</span> в ближайшее время</h2>
         <p class="section-subtitle" style="margin-top: 20px;">
           Бесплатно проконсультируем, оценим объём работ
           и&nbsp;подберём оптимальное решение под ваше предприятие.
@@ -2330,16 +2243,16 @@
             </div>
             <div>
               <div class="contact-label">Телефон</div>
-              <div class="contact-value">+7 (495) 123-45-67</div>
+              <div class="contact-value">+7 (953) 210-27-37</div>
             </div>
           </a>
-          <a href="mailto:info@haccp-pro.ru" class="contact-item contact-value">
+          <a href="mailto:audit-haccp@mail.ru" class="contact-item contact-value">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div>
               <div class="contact-label">Email</div>
-              <div class="contact-value">info@haccp-pro.ru</div>
+              <div class="contact-value">audit-haccp@mail.ru</div>
             </div>
           </a>
           <div class="contact-item">
