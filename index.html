@@ -1465,6 +1465,64 @@
   /* Stats numbers */
   .stat-num { color: var(--gold); }
 
+  /* ============ PREMIUM POLISH: scroll progress, h1 reveal, hero cursor glow, hero-card float ============ */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-dark));
+    z-index: 1001;
+    transition: width .08s linear;
+    pointer-events: none;
+  }
+  /* Word-by-word hero h1 reveal */
+  .hero h1 .h1-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .85s cubic-bezier(.2,.8,.2,1), transform .85s cubic-bezier(.2,.8,.2,1);
+    will-change: opacity, transform;
+  }
+  .hero h1.revealed .h1-word {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Cursor-follow ambient glow in hero */
+  .hero-cursor-glow {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(220, 110, 88, 0.14), transparent 60%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .35s ease;
+    z-index: 0;
+    mix-blend-mode: multiply;
+    left: 50%;
+    top: 50%;
+  }
+  .hero:hover .hero-cursor-glow { opacity: 1; }
+  /* Subtle floating of hero-card */
+  @keyframes heroCardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .hero-card {
+    animation: heroCardFloat 9s ease-in-out infinite;
+  }
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero h1 .h1-word { opacity: 1; transform: none; transition: none; }
+    .hero-card { animation: none; }
+    .hero-cursor-glow { display: none; }
+    .scroll-progress { transition: none; }
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
   /* NEW badge — uses brand orange/green from the logo for energetic pop on the gentle palette */
   .service-card { position: relative; }
   .service-badge {
@@ -1701,6 +1759,8 @@
 <body>
 
 <!-- ============ NAV ============ -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
 <header><nav class="nav" id="nav" role="navigation" aria-label="Главная навигация">
   <div class="container nav-inner">
     <a href="#top" class="logo">
@@ -1727,6 +1787,7 @@
 <main>
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
+  <div class="hero-cursor-glow" id="cursorGlow" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-grid">
       <div class="hero-content">
@@ -2649,6 +2710,109 @@
     };
     document.getElementById('cookieAccept').addEventListener('click', () => dismiss('accepted'));
     document.getElementById('cookieDecline').addEventListener('click', () => dismiss('declined'));
+  })();
+
+  // Top scroll progress bar
+  (function(){
+    const bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+    const update = () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = total > 0 ? (window.scrollY / total) * 100 : 0;
+      bar.style.width = pct + '%';
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+
+  // Word-by-word hero h1 reveal on load
+  (function(){
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const h1 = document.querySelector('.hero h1');
+    if (!h1) return;
+    const nodes = Array.from(h1.childNodes);
+    h1.innerHTML = '';
+    let i = 0;
+    nodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        const parts = node.textContent.split(/(\s+)/);
+        parts.forEach(p => {
+          if (!p) return;
+          if (/^\s+$/.test(p)) {
+            h1.appendChild(document.createTextNode(p));
+          } else {
+            const span = document.createElement('span');
+            span.className = 'h1-word';
+            span.textContent = p;
+            span.style.transitionDelay = (i * 70) + 'ms';
+            i++;
+            h1.appendChild(span);
+          }
+        });
+      } else {
+        // Inline element like .accent — wrap as single word
+        const span = document.createElement('span');
+        span.className = 'h1-word';
+        span.appendChild(node.cloneNode(true));
+        span.style.transitionDelay = (i * 70) + 'ms';
+        i++;
+        h1.appendChild(span);
+      }
+    });
+    // Trigger reveal next frame
+    requestAnimationFrame(() => requestAnimationFrame(() => h1.classList.add('revealed')));
+  })();
+
+  // Animated counter for stats
+  (function(){
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const els = document.querySelectorAll('.stat-num');
+    if (!els.length) return;
+    const counted = new WeakSet();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting || counted.has(entry.target)) return;
+        counted.add(entry.target);
+        const el = entry.target;
+        const original = el.textContent.trim();
+        const m = original.match(/^(\d+)(.*)$/);
+        if (!m) return;
+        const target = parseInt(m[1], 10);
+        const suffix = m[2];
+        const dur = 1400;
+        const start = performance.now();
+        const tick = (now) => {
+          const t = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          const v = Math.floor(eased * target);
+          el.textContent = v + suffix;
+          if (t < 1) requestAnimationFrame(tick);
+          else el.textContent = original;
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.45 });
+    els.forEach(el => io.observe(el));
+  })();
+
+  // Hero cursor-follow ambient glow
+  (function(){
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.matchMedia('(pointer: coarse)').matches) return; // skip on touch
+    const hero = document.querySelector('.hero');
+    const glow = document.getElementById('cursorGlow');
+    if (!hero || !glow) return;
+    let raf = null;
+    hero.addEventListener('mousemove', (e) => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const rect = hero.getBoundingClientRect();
+        glow.style.left = (e.clientX - rect.left) + 'px';
+        glow.style.top = (e.clientY - rect.top) + 'px';
+        raf = null;
+      });
+    });
   })();
 
   // Reveal on scroll
