@@ -3,17 +3,30 @@
   "short_name": "ЭПБ",
   "description": "Разработка ХАССП, аудиты, подготовка к проверкам Роспотребнадзора и аудитам торговых сетей.",
   "start_url": "/",
+  "scope": "/",
   "display": "browser",
   "lang": "ru",
-  "background_color": "#0B0805",
-  "theme_color": "#0B0805",
+  "background_color": "#FBFAF7",
+  "theme_color": "#FBFAF7",
   "orientation": "portrait-primary",
   "icons": [
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "logo-mark.png",
       "sizes": "256x256",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
   ]
 }

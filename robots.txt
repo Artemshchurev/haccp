@@ -1,5 +1,4 @@
-# robots.txt for Эксперт пищевой безопасности
-# Replace https://example.ru with the real domain after registration
+# robots.txt for Эксперт пищевой безопасности · haccpauditor.ru
 
 User-agent: *
 Allow: /
@@ -11,5 +10,5 @@ Allow: /
 Disallow: /thumbs/
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&gclid
 
-Sitemap: https://example.ru/sitemap.xml
-Host: https://example.ru
+Sitemap: https://haccpauditor.ru/sitemap.xml
+Host: https://haccpauditor.ru

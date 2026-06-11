@@ -21,8 +21,8 @@
 <meta name="ICBM" content="43.1198, 131.8869">
 
 <!-- Theme & PWA -->
-<meta name="theme-color" content="#0B0805">
-<meta name="msapplication-TileColor" content="#0B0805">
+<meta name="theme-color" content="#FBFAF7">
+<meta name="msapplication-TileColor" content="#FBFAF7">
 <meta name="format-detection" content="telephone=no">
 <link rel="manifest" href="manifest.json">
 
@@ -34,27 +34,42 @@
 <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-<!-- Canonical (REPLACE example.ru with real domain when registered) -->
-<link rel="canonical" href="https://example.ru/">
+<!-- Canonical -->
+<link rel="canonical" href="https://haccpauditor.ru/">
 
-<!-- Open Graph (Facebook, VK, Telegram) -->
+<!-- Open Graph (Facebook, VK, Telegram, WhatsApp) -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Эксперт пищевой безопасности">
-<meta property="og:title" content="Эксперт пищевой безопасности — ХАССП и подготовка к проверкам">
-<meta property="og:description" content="Разработка и внедрение ХАССП под ключ. Подготовка к проверкам Роспотребнадзора и аудитам торговых сетей. Владивосток.">
-<meta property="og:url" content="https://example.ru/">
-<meta property="og:image" content="https://example.ru/og-image.jpg">
+<meta property="og:title" content="ХАССП под ключ во Владивостоке · Подготовка к Роспотребнадзору">
+<meta property="og:description" content="Разработка и внедрение ХАССП за 14 дней. Подготовка к проверкам Роспотребнадзора и аудитам торговых сетей. Гарантия в договоре. Бесплатная консультация — позвоните или оставьте заявку.">
+<meta property="og:url" content="https://haccpauditor.ru/">
+<meta property="og:image" content="https://haccpauditor.ru/og-image.jpg">
+<meta property="og:image:secure_url" content="https://haccpauditor.ru/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:alt" content="Эксперт пищевой безопасности — логотип на тёмном фоне">
+<meta property="og:image:alt" content="Эксперт пищевой безопасности — ХАССП, аудит и подготовка к Роспотребнадзору. Владивосток.">
 
-<!-- Twitter Card -->
+<!-- Open Graph: phone / contact -->
+<meta property="og:phone_number" content="+7 (953) 210-27-37">
+<meta property="og:email" content="audit-haccp@mail.ru">
+<meta property="og:region" content="Приморский край">
+<meta property="og:country-name" content="Россия">
+
+<!-- Twitter / X Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Эксперт пищевой безопасности — ХАССП и проверки Роспотребнадзора">
-<meta name="twitter:description" content="Разработка и внедрение ХАССП. Подготовка к проверкам без штрафов. Владивосток, по всей России.">
-<meta name="twitter:image" content="https://example.ru/og-image.jpg">
+<meta name="twitter:site" content="@haccpauditor">
+<meta name="twitter:title" content="ХАССП под ключ во Владивостоке · Подготовка к Роспотребнадзору">
+<meta name="twitter:description" content="Разработка и внедрение ХАССП за 14 дней. Аудиты, гарантия в договоре, работаем по всей России.">
+<meta name="twitter:image" content="https://haccpauditor.ru/og-image.jpg">
+<meta name="twitter:image:alt" content="Эксперт пищевой безопасности — ХАССП и аудит">
+
+<!-- Telegram / VK rich link hints -->
+<meta name="telegram:channel" content="">
+<meta itemprop="name" content="Эксперт пищевой безопасности — ХАССП и аудит">
+<meta itemprop="description" content="Разработка и внедрение ХАССП. Подготовка к проверкам Роспотребнадзора и аудитам торговых сетей. Владивосток.">
+<meta itemprop="image" content="https://haccpauditor.ru/og-image.jpg">
 
 <!-- Yandex / Google site verification (UNCOMMENT and paste your codes after registering) -->
 <!-- <meta name="yandex-verification" content="ВАШ_КОД_ЯНДЕКС_ВЕБМАСТЕР"> -->
@@ -258,7 +273,7 @@
   /* ============ HERO ============ */
   .hero {
     min-height: 100vh;
-    padding: 140px 0 80px;
+    padding: 130px 0 70px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -360,6 +375,9 @@
     font-size: 14px;
   }
 
+  /* Mobile-only compact stat pill (hidden on desktop / tablet) */
+  .hero-stat-pill { display: none; }
+
   /* Hero card / visual */
   .hero-card {
     position: relative;
@@ -458,10 +476,10 @@
 
   /* ============ SECTIONS ============ */
   section { position: relative; }
-  .section { padding: 120px 0; }
+  .section { padding: 96px 0; }
   .section-header {
     max-width: 760px;
-    margin: 0 auto 80px;
+    margin: 0 auto 60px;
     text-align: center;
   }
   .section-eyebrow {
@@ -508,7 +526,7 @@
     background: var(--bg-2);
     border-top: 1px solid var(--border-soft);
     border-bottom: 1px solid var(--border-soft);
-    padding: 64px 0;
+    padding: 52px 0;
   }
   .stats-grid {
     display: grid;
@@ -1067,6 +1085,19 @@
     transform: translate(-50%, -50%);
   }
   .form-checkbox a { color: var(--gold-dark); text-decoration: underline; text-decoration-color: rgba(220, 110, 88, 0.3); }
+  .form-checkbox.invalid .form-checkbox-mark {
+    border-color: #E74C3C;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.10);
+    animation: shake .4s ease;
+  }
+  .form-checkbox.invalid { color: #E74C3C; }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-3px); }
+    40%, 80% { transform: translateX(3px); }
+  }
+  .form-field.invalid input,
+  .form-field.invalid textarea { animation: shake .4s ease; }
   .form-submit {
     width: 100%;
     padding: 18px;
@@ -1089,7 +1120,7 @@
   /* ============ FOOTER ============ */
   .footer {
     background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-3) 40%, var(--bg-3) 100%);
-    padding: 80px 0 32px;
+    padding: 64px 0 28px;
   }
   .footer-col a:hover { color: var(--gold); }
   .footer-grid {
@@ -1124,7 +1155,7 @@
   }
   .footer-col a:hover { color: var(--gold-dark); }
   .footer-bottom {
-    padding-top: 32px;
+    padding-top: 24px;
     border-top: 1px solid var(--border-soft);
     display: flex;
     justify-content: space-between;
@@ -1133,6 +1164,26 @@
     gap: 16px;
     color: var(--text-muted);
     font-size: 13px;
+  }
+  .footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-soft);
+    font-size: 13px;
+  }
+  .footer-legal a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color .2s ease;
+  }
+  .footer-legal a:hover { color: var(--gold-dark); }
+  .footer-legal-sep { color: var(--text-muted); opacity: .5; }
+  @media (max-width: 720px) {
+    .footer-legal { font-size: 12px; gap: 6px 10px; margin-top: 18px; padding-top: 18px; }
   }
 
   /* Реквизиты в футере */
@@ -1247,28 +1298,77 @@
   }
 
   /* ============ RESPONSIVE ============ */
+  /* Small laptop — content gets cramped, hero card slightly smaller */
+  @media (max-width: 1280px) {
+    .nav-inner { gap: 20px; }
+    .nav-links { gap: 26px; font-size: 13.5px; }
+    .nav-cta { gap: 14px; }
+    .nav-cta .nav-phone { display: none; }
+    .hero-grid { gap: 56px; }
+    .hero-card-stat-num { font-size: 88px; }
+  }
+
+  /* Tablet portrait + landscape — stack hero, two-col grids */
   @media (max-width: 1024px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 60px; }
-    .hero-card { max-width: 480px; margin: 0 auto; aspect-ratio: 5/4; }
+    .container { padding: 0 28px; }
+
+    /* Hero: drop full-viewport centering, hide big card, show compact pill */
+    .hero {
+      min-height: auto;
+      align-items: flex-start;
+      padding: 120px 0 64px;
+    }
+    .hero-grid { grid-template-columns: 1fr; gap: 0; }
+    .hero-content { max-width: 760px; }
+    .hero-card { display: none; }
+
+    .hero-stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      padding: 16px 22px;
+      background: linear-gradient(135deg, rgba(220, 110, 88, 0.10), rgba(220, 110, 88, 0.04));
+      border: 1px solid rgba(220, 110, 88, 0.22);
+      border-radius: 16px;
+      margin-bottom: 36px;
+      box-shadow: 0 8px 24px -12px rgba(220, 110, 88, 0.25);
+    }
+    .hero-stat-pill-num {
+      font-family: var(--serif);
+      font-size: 44px;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--gold-dark);
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
+    }
+    .hero-stat-pill-num span { color: var(--gold); font-style: italic; font-weight: 400; }
+    .hero-stat-pill-text {
+      font-size: 14px;
+      line-height: 1.45;
+      color: var(--text-secondary);
+    }
+    .hero-stat-pill-text strong { color: var(--text-primary); font-weight: 600; }
+
+    /* Hide desktop nav at tablet; phone already hidden by 1200 rule above */
+    .nav-links { display: none; }
+    .nav-cta .nav-phone { display: none; }
+    .burger { display: flex; }
+
     .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 20px; }
     .stat:nth-child(2)::after { display: none; }
     .services-grid { grid-template-columns: 1fr; }
     .industries-grid { grid-template-columns: repeat(2, 1fr); }
     .process-grid { grid-template-columns: repeat(2, 1fr); }
     .process-grid::before { display: none; }
-    .adv-layout { grid-template-columns: 1fr; gap: 60px; }
-    .contact-grid { grid-template-columns: 1fr; gap: 60px; }
-    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .adv-layout { grid-template-columns: 1fr; gap: 56px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
   }
-  @media (max-width: 720px) {
-    .container { padding: 0 20px; }
-    .nav { padding: 16px 0; }
-    .nav-links { display: none; }
-    .nav-cta .nav-phone { display: none; }
-    .nav-cta .btn { padding: 12px 18px; font-size: 13px; }
-    .burger { display: flex; }
+  /* Burger menu (active on tablet + mobile) */
+  @media (max-width: 1024px) {
     .nav.menu-open .nav-links {
-      display: flex;
+      display: flex !important;
       position: fixed;
       top: 70px;
       left: 0;
@@ -1278,18 +1378,38 @@
       padding: 32px;
       gap: 24px;
       border-bottom: 1px solid var(--border-soft);
+      box-shadow: 0 20px 40px -20px rgba(40, 25, 5, 0.15);
+      font-size: 16px;
     }
+  }
 
-    .hero { padding: 110px 0 60px; }
+  @media (max-width: 720px) {
+    .container { padding: 0 20px; }
+    .nav { padding: 16px 0; }
+    .nav-cta .btn { padding: 12px 18px; font-size: 13px; }
+
+    .hero { padding: 96px 0 40px; }
+    .hero h1 { margin-bottom: 16px; }
+    .hero-subtitle { margin-bottom: 28px; font-size: 16px; }
+    .hero-actions { margin-bottom: 28px; }
     .hero-trust { gap: 20px; }
-    .hero-card { padding: 0; }
-    .hero-card-content { padding: 28px; }
-    .hero-card-stat-num { font-size: 64px; }
+    .hero-trust-text { font-size: 12.5px; }
+    .hero-trust-text strong { font-size: 13px; }
 
-    .section { padding: 80px 0; }
-    .section-header { margin-bottom: 50px; }
+    /* Compact pill shrinks slightly on phones */
+    .hero-stat-pill {
+      gap: 14px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      margin-bottom: 28px;
+    }
+    .hero-stat-pill-num { font-size: 36px; }
+    .hero-stat-pill-text { font-size: 13px; }
 
-    .stats { padding: 40px 0; }
+    .section { padding: 52px 0; }
+    .section-header { margin-bottom: 32px; }
+
+    .stats { padding: 32px 0; }
     .stats-grid { gap: 32px 20px; }
     .stat { padding: 0; }
     .stat:not(:last-child)::after { display: none; }
@@ -1307,8 +1427,11 @@
     .form-row { grid-template-columns: 1fr; gap: 0; }
     .faq-question { font-size: 17px; padding: 22px 0; }
 
-    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; margin-bottom: 36px; }
     .footer-bottom { flex-direction: column; text-align: center; }
+    .footer { padding: 44px 0 24px; }
+    .footer-requisites { margin-bottom: 24px; padding-top: 20px; }
+    .footer-requisites-grid { padding: 20px 0 4px; margin-top: 18px; }
 
     .btn { padding: 14px 24px; font-size: 14px; }
     .float-btn { width: 52px; height: 52px; right: 16px; bottom: 16px; }
@@ -1588,6 +1711,13 @@
     line-height: 1.55;
     color: var(--text-secondary);
   }
+  .cookie-text a {
+    color: var(--gold-dark);
+    text-decoration: underline;
+    text-decoration-color: rgba(220, 110, 88, 0.35);
+    text-underline-offset: 2px;
+  }
+  .cookie-text a:hover { color: var(--gold); }
   .cookie-actions {
     display: flex;
     gap: 10px;
@@ -1754,6 +1884,202 @@
     .lightbox-prev { left: 8px; }
     .lightbox-next { right: 8px; }
   }
+
+  /* ============ SUCCESS / ERROR MODAL ============ */
+  .modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(46, 37, 32, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: modalFade .25s ease;
+  }
+  .modal.open { display: flex; }
+  @keyframes modalFade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes modalPop {
+    0%   { opacity: 0; transform: translateY(20px) scale(.94); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .modal-card {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% 0%, #FFE7DC 0%, transparent 65%),
+      linear-gradient(180deg, #FFFFFF 0%, #FBFAF7 100%);
+    border-radius: 24px;
+    padding: 56px 44px 44px;
+    text-align: center;
+    box-shadow:
+      0 40px 100px -20px rgba(40, 25, 5, 0.30),
+      0 8px 24px -8px rgba(220, 110, 88, 0.20),
+      inset 0 0 0 1px rgba(220, 110, 88, 0.15);
+    animation: modalPop .42s cubic-bezier(.2,.8,.2,1);
+    overflow: hidden;
+  }
+  .modal-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 80% 90%, rgba(122, 155, 102, 0.10), transparent 60%);
+    pointer-events: none;
+  }
+  .modal-card > * { position: relative; z-index: 1; }
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border-soft);
+    background: rgba(255,255,255,0.7);
+    color: var(--text-muted);
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+    z-index: 2;
+  }
+  .modal-close:hover {
+    color: var(--gold-dark);
+    border-color: var(--border);
+    background: #fff;
+    transform: rotate(90deg);
+  }
+  .modal-icon {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 30% 30%, #EE9181 0%, #DC6E58 60%, #A14935 100%);
+    color: #fff;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+      0 20px 40px -10px rgba(220, 110, 88, 0.50),
+      inset 0 -3px 0 rgba(0,0,0,0.10),
+      inset 0 3px 0 rgba(255,255,255,0.25);
+    position: relative;
+    animation: iconPulse 2.4s ease-in-out infinite;
+  }
+  .modal-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: #fff;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: checkDraw .7s .2s cubic-bezier(.2,.8,.2,1) backwards;
+  }
+  @keyframes iconPulse {
+    0%, 100% { box-shadow: 0 20px 40px -10px rgba(220, 110, 88, 0.50), inset 0 -3px 0 rgba(0,0,0,0.10), inset 0 3px 0 rgba(255,255,255,0.25), 0 0 0 0 rgba(220, 110, 88, 0.0); }
+    50%      { box-shadow: 0 20px 40px -10px rgba(220, 110, 88, 0.50), inset 0 -3px 0 rgba(0,0,0,0.10), inset 0 3px 0 rgba(255,255,255,0.25), 0 0 0 14px rgba(220, 110, 88, 0.0); }
+    25%      { box-shadow: 0 20px 40px -10px rgba(220, 110, 88, 0.50), inset 0 -3px 0 rgba(0,0,0,0.10), inset 0 3px 0 rgba(255,255,255,0.25), 0 0 0 8px rgba(220, 110, 88, 0.15); }
+  }
+  @keyframes checkDraw {
+    from { stroke-dasharray: 0 100; }
+    to   { stroke-dasharray: 100 0; }
+  }
+  .modal-icon.error {
+    background:
+      radial-gradient(circle at 30% 30%, #E89B8B 0%, #C75B45 60%, #8C3724 100%);
+    animation: none;
+    box-shadow:
+      0 20px 40px -10px rgba(199, 91, 69, 0.45),
+      inset 0 -3px 0 rgba(0,0,0,0.10),
+      inset 0 3px 0 rgba(255,255,255,0.25);
+  }
+  .modal-title {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+  .modal-title .accent {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .modal-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+  }
+  .modal-text strong { color: var(--text-primary); font-weight: 600; }
+  .modal-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(122, 155, 102, 0.10);
+    color: var(--orange-dark);
+    border: 1px solid rgba(122, 155, 102, 0.25);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .modal-meta svg { width: 14px; height: 14px; }
+  .modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .modal-actions .btn {
+    padding: 14px 26px;
+    font-size: 14px;
+  }
+  @media (max-width: 720px) {
+    .modal-card { padding: 44px 26px 32px; border-radius: 18px; }
+    .modal-icon { width: 72px; height: 72px; margin-bottom: 22px; }
+    .modal-icon svg { width: 34px; height: 34px; }
+    .modal-title { font-size: 24px; }
+    .modal-text { font-size: 15px; margin-bottom: 24px; }
+  }
+
+  /* ============ FORM SPINNER / LOADING STATE ============ */
+  .form-submit { position: relative; }
+  .form-submit.loading {
+    pointer-events: none;
+    color: transparent;
+  }
+  .form-submit.loading .btn-arrow { opacity: 0; }
+  .form-submit.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255,0.35);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .modal, .modal-card, .modal-icon, .modal-icon svg { animation: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -1804,6 +2130,15 @@
           </a>
           <a href="#services" class="btn btn-outline">Наши услуги</a>
         </div>
+
+        <!-- Mobile-only compact result pill -->
+        <div class="hero-stat-pill" aria-hidden="false">
+          <div class="hero-stat-pill-num">100<span>%</span></div>
+          <div class="hero-stat-pill-text">
+            <strong>прохождение проверок</strong><br>Роспотребнадзора при работе с&nbsp;нами
+          </div>
+        </div>
+
         <div class="hero-trust">
           <div class="hero-trust-item">
             <div class="hero-trust-icon">✓</div>
@@ -2443,36 +2778,40 @@
         <h3 class="form-title">Получить консультацию</h3>
         <p class="form-subtitle">Заполните форму — наш эксперт свяжется в&nbsp;течение 30&nbsp;минут</p>
 
-        <div class="form-success" id="formSuccess">
-          ✓ Спасибо! Заявка отправлена. Мы свяжемся с вами в ближайшее время.
-        </div>
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <!-- Web3Forms hidden fields -->
+          <input type="hidden" name="access_key" value="31a526f3-61c9-41b9-90dd-72baa0dc1d75">
+          <input type="hidden" name="subject" value="Новая заявка с haccpauditor.ru">
+          <input type="hidden" name="from_name" value="haccpauditor.ru">
+          <!-- honeypot for bots -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
 
-        <form id="contactForm" novalidate>
           <div class="form-field" data-field="name">
-            <input type="text" name="name" placeholder="ФИО *" required autocomplete="name">
-            <div class="form-error">Пожалуйста, укажите ФИО</div>
+            <input type="text" name="name" placeholder="ФИО *" required autocomplete="name" minlength="2" maxlength="80">
+            <div class="form-error">Пожалуйста, укажите ФИО (минимум 2 символа)</div>
           </div>
           <div class="form-row">
             <div class="form-field" data-field="phone">
               <input type="tel" name="phone" placeholder="Телефон *" required autocomplete="tel" inputmode="tel">
-              <div class="form-error">Введите корректный телефон</div>
+              <div class="form-error">Введите корректный номер телефона</div>
             </div>
             <div class="form-field" data-field="email">
-              <input type="email" name="email" placeholder="Email *" required autocomplete="email">
-              <div class="form-error">Введите корректный email</div>
+              <input type="email" name="email" placeholder="Email *" required autocomplete="email" maxlength="120">
+              <div class="form-error">Укажите корректный email (например, name@mail.ru)</div>
             </div>
           </div>
           <div class="form-field" data-field="message">
-            <textarea name="message" placeholder="Кратко о вашем предприятии и задаче (необязательно)"></textarea>
+            <textarea name="message" placeholder="Кратко о вашем предприятии и задаче (необязательно)" maxlength="2000"></textarea>
+            <div class="form-error">Сообщение слишком длинное</div>
           </div>
 
-          <label class="form-checkbox">
-            <input type="checkbox" id="consent" checked>
+          <label class="form-checkbox" data-field="consent">
+            <input type="checkbox" id="consent" name="consent" value="да" checked>
             <span class="form-checkbox-mark"></span>
-            <span>Согласен на обработку персональных данных согласно <a href="#">политике конфиденциальности</a></span>
+            <span>Согласен на&nbsp;обработку <a href="consent.html" target="_blank" rel="noopener">персональных данных</a> и&nbsp;принимаю <a href="privacy.html" target="_blank" rel="noopener">политику конфиденциальности</a></span>
           </label>
 
-          <button type="submit" class="btn btn-primary form-submit">
+          <button type="submit" class="btn btn-primary form-submit" id="formSubmit">
             Отправить заявку
             <span class="btn-arrow">→</span>
           </button>
@@ -2567,6 +2906,16 @@
       </div>
     </details>
 
+    <div class="footer-legal">
+      <a href="privacy.html" target="_blank" rel="noopener">Политика конфиденциальности</a>
+      <span class="footer-legal-sep">·</span>
+      <a href="consent.html" target="_blank" rel="noopener">Согласие на обработку ПД</a>
+      <span class="footer-legal-sep">·</span>
+      <a href="offer.html" target="_blank" rel="noopener">Договор-оферта</a>
+      <span class="footer-legal-sep">·</span>
+      <a href="cookies.html" target="_blank" rel="noopener">Cookies</a>
+    </div>
+
     <div class="footer-bottom">
       <div>© 2026 ИП Болдырева С.&nbsp;В. Все права защищены.</div>
       <div>ИНН 250714405391 · ОГРНИП 321253600068896</div>
@@ -2581,11 +2930,44 @@
   </div>
   <p class="cookie-text">
     Мы используем cookies для аналитики и&nbsp;улучшения сайта.
-    Продолжая просмотр, вы&nbsp;соглашаетесь с&nbsp;их&nbsp;использованием.
+    Продолжая просмотр, вы&nbsp;соглашаетесь с&nbsp;<a href="cookies.html" target="_blank" rel="noopener">политикой&nbsp;cookies</a>.
   </p>
   <div class="cookie-actions">
     <button type="button" class="cookie-decline" id="cookieDecline">Отклонить</button>
     <button type="button" class="btn btn-primary cookie-accept" id="cookieAccept">Принять</button>
+  </div>
+</div>
+
+<!-- ============ MODAL (success / error) ============ -->
+<div class="modal" id="formModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-card" role="document">
+    <button type="button" class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
+
+    <div class="modal-icon" id="modalIcon">
+      <!-- checkmark by default -->
+      <svg viewBox="0 0 24 24" id="modalIconSvg" aria-hidden="true">
+        <polyline points="5 12.5 10 17.5 19 7"></polyline>
+      </svg>
+    </div>
+
+    <h3 class="modal-title" id="modalTitle">Спасибо, <span class="accent">заявка принята!</span></h3>
+    <p class="modal-text" id="modalText">
+      Мы получили вашу заявку и&nbsp;уже передали её&nbsp;эксперту.
+      <br>Свяжемся с&nbsp;вами в&nbsp;рабочее время.
+    </p>
+
+    <div class="modal-meta" id="modalMeta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Пн–Пт 9:00 – 19:00 (Владивосток)
+    </div>
+
+    <div class="modal-actions">
+      <a href="tel:+79532102737" class="btn btn-primary">
+        Позвонить сейчас
+        <span class="btn-arrow">→</span>
+      </a>
+      <button type="button" class="btn btn-ghost" id="modalOk">Закрыть</button>
+    </div>
   </div>
 </div>
 
@@ -2840,55 +3222,163 @@
     e.target.value = f;
   });
 
-  // Form validation + mailto submit
-  const form = document.getElementById('contactForm');
-  const successBox = document.getElementById('formSuccess');
-  const TARGET_EMAIL = 'info@haccp-pro.ru'; // <-- ЗАМЕНИ на свой email
+  // ============ Form validation + Web3Forms submit ============
+  const form        = document.getElementById('contactForm');
+  const submitBtn   = document.getElementById('formSubmit');
+  const consentEl   = document.getElementById('consent');
+  const consentWrap = form.querySelector('.form-checkbox');
 
+  const modal       = document.getElementById('formModal');
+  const modalIcon   = document.getElementById('modalIcon');
+  const modalIconSvg= document.getElementById('modalIconSvg');
+  const modalTitle  = document.getElementById('modalTitle');
+  const modalText   = document.getElementById('modalText');
+  const modalMeta   = document.getElementById('modalMeta');
+  const modalClose  = document.getElementById('modalClose');
+  const modalOk     = document.getElementById('modalOk');
+
+  // Validators
   const validators = {
-    name: v => v.trim().length >= 2,
-    phone: v => v.replace(/\D/g, '').length >= 11,
-    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())
+    name: v => {
+      const t = v.trim();
+      return t.length >= 2 && t.length <= 80 && /^[А-ЯЁA-Zа-яёa-z\s\-\.']+$/u.test(t);
+    },
+    phone: v => {
+      const digits = v.replace(/\D/g, '');
+      return digits.length === 11 && (digits.startsWith('7') || digits.startsWith('8'));
+    },
+    email: v => {
+      const t = v.trim();
+      return t.length <= 120 && /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(t);
+    },
+    message: v => v.length <= 2000
   };
 
-  form.addEventListener('submit', (e) => {
+  const errorMsgs = {
+    name: 'Укажите ФИО (только буквы, минимум 2 символа)',
+    phone: 'Введите телефон формата +7 (XXX) XXX-XX-XX',
+    email: 'Укажите корректный email (например, name@mail.ru)',
+    message: 'Сообщение слишком длинное (максимум 2000 символов)'
+  };
+
+  function setFieldError(key, msg) {
+    const field = form.querySelector(`[data-field="${key}"]`);
+    if (!field) return;
+    field.classList.add('invalid');
+    const err = field.querySelector('.form-error');
+    if (err && msg) err.textContent = msg;
+  }
+  function clearFieldError(key) {
+    const field = form.querySelector(`[data-field="${key}"]`);
+    field?.classList.remove('invalid');
+  }
+
+  // Open/close modal
+  function openModal({ type = 'success', title, text, showMeta = true } = {}) {
+    if (type === 'error') {
+      modalIcon.classList.add('error');
+      modalIconSvg.innerHTML = '<line x1="8" y1="8" x2="16" y2="16"></line><line x1="16" y1="8" x2="8" y2="16"></line>';
+      modalTitle.innerHTML   = title || 'Что-то пошло не&nbsp;так';
+      modalText.innerHTML    = text  || 'Не удалось отправить заявку. Попробуйте&nbsp;ещё&nbsp;раз или позвоните нам напрямую.';
+      modalMeta.style.display= 'none';
+    } else {
+      modalIcon.classList.remove('error');
+      modalIconSvg.innerHTML = '<polyline points="5 12.5 10 17.5 19 7"></polyline>';
+      modalTitle.innerHTML   = title || 'Спасибо, <span class="accent">заявка принята!</span>';
+      modalText.innerHTML    = text  || 'Мы получили вашу заявку и&nbsp;уже передали её&nbsp;эксперту.<br>Свяжемся с&nbsp;вами <strong>в&nbsp;течение 30&nbsp;минут</strong> в&nbsp;рабочее время.';
+      modalMeta.style.display= showMeta ? '' : 'none';
+    }
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  modalClose.addEventListener('click', closeModal);
+  modalOk.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  // Submit
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(form);
     let valid = true;
+    let firstInvalid = null;
 
     ['name', 'phone', 'email'].forEach(key => {
-      const field = form.querySelector(`[data-field="${key}"]`);
-      const value = data.get(key) || '';
+      const value = (data.get(key) || '').toString();
       if (!validators[key](value)) {
-        field.classList.add('invalid');
+        setFieldError(key, errorMsgs[key]);
+        if (!firstInvalid) firstInvalid = form.querySelector(`[name="${key}"]`);
         valid = false;
       } else {
-        field.classList.remove('invalid');
+        clearFieldError(key);
       }
     });
 
-    if (!document.getElementById('consent').checked) {
-      alert('Пожалуйста, подтвердите согласие на обработку персональных данных.');
+    const messageVal = (data.get('message') || '').toString();
+    if (!validators.message(messageVal)) {
+      setFieldError('message', errorMsgs.message);
+      if (!firstInvalid) firstInvalid = form.querySelector('[name="message"]');
+      valid = false;
+    } else {
+      clearFieldError('message');
+    }
+
+    if (!consentEl.checked) {
+      consentWrap.classList.add('invalid');
+      if (!firstInvalid) firstInvalid = consentEl;
+      valid = false;
+    } else {
+      consentWrap.classList.remove('invalid');
+    }
+
+    if (!valid) {
+      firstInvalid?.focus?.();
+      firstInvalid?.scrollIntoView?.({ behavior: 'smooth', block: 'center' });
       return;
     }
 
-    if (!valid) return;
+    // honeypot
+    if (data.get('botcheck')) return;
 
-    // Compose mailto
-    const subject = encodeURIComponent('Заявка с сайта HACCP Pro');
-    const body = encodeURIComponent(
-      'Новая заявка с сайта:\n\n' +
-      'ФИО: ' + data.get('name') + '\n' +
-      'Телефон: ' + data.get('phone') + '\n' +
-      'Email: ' + data.get('email') + '\n' +
-      (data.get('message') ? 'Сообщение: ' + data.get('message') + '\n' : '')
-    );
-    window.location.href = `mailto:${TARGET_EMAIL}?subject=${subject}&body=${body}`;
+    // Send to Web3Forms
+    submitBtn.classList.add('loading');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      });
+      const json = await res.json().catch(() => ({}));
+      submitBtn.classList.remove('loading');
 
-    // Show success
-    successBox.classList.add('show');
-    form.reset();
-    setTimeout(() => successBox.classList.remove('show'), 6000);
+      if (res.ok && json.success) {
+        form.reset();
+        // restore consent default
+        consentEl.checked = true;
+        openModal({ type: 'success' });
+      } else {
+        openModal({
+          type: 'error',
+          text: (json && json.message)
+            ? json.message + '<br><br>Свяжитесь с&nbsp;нами по&nbsp;телефону <strong>+7 (953) 210-27-37</strong>.'
+            : undefined
+        });
+      }
+    } catch (err) {
+      submitBtn.classList.remove('loading');
+      openModal({
+        type: 'error',
+        text: 'Сеть недоступна. Проверьте подключение или позвоните нам: <strong>+7 (953) 210-27-37</strong>.'
+      });
+    }
   });
 
   // Clear invalid on input
@@ -2897,23 +3387,25 @@
       el.closest('.form-field')?.classList.remove('invalid');
     });
   });
+  consentEl.addEventListener('change', () => {
+    if (consentEl.checked) consentWrap.classList.remove('invalid');
+  });
 </script>
 
 <!-- =================== STRUCTURED DATA / JSON-LD =================== -->
-<!-- Replace https://example.ru with real domain after registration -->
 
 <!-- LocalBusiness / ProfessionalService -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://example.ru/#organization",
+  "@id": "https://haccpauditor.ru/#organization",
   "name": "Эксперт пищевой безопасности",
   "alternateName": "ИП Болдырева С. В.",
   "description": "Разработка и внедрение ХАССП, аудиты, подготовка к проверкам Роспотребнадзора и аудитам торговых сетей для предприятий общественного питания и пищевых производств.",
-  "url": "https://example.ru/",
-  "logo": "https://example.ru/logo-2.png",
-  "image": "https://example.ru/logo-trim.png",
+  "url": "https://haccpauditor.ru/",
+  "logo": "https://haccpauditor.ru/logo-2.png",
+  "image": "https://haccpauditor.ru/logo-trim.png",
   "telephone": "+7 (953) 210-27-37",
   "email": "audit-haccp@mail.ru",
   "founder": {
@@ -2966,11 +3458,11 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://example.ru/#website",
-  "url": "https://example.ru/",
+  "@id": "https://haccpauditor.ru/#website",
+  "url": "https://haccpauditor.ru/",
   "name": "Эксперт пищевой безопасности",
   "inLanguage": "ru-RU",
-  "publisher": { "@id": "https://example.ru/#organization" }
+  "publisher": { "@id": "https://haccpauditor.ru/#organization" }
 }
 </script>
 
@@ -2983,7 +3475,7 @@
   "itemListElement": [
     { "@type": "Service", "position": 1, "name": "Разработка и внедрение ХАССП с сопровождением",
       "description": "Поэтапный разбор документов системы менеджмента безопасности пищевой продукции и их внедрение на предприятии. Консультирование онлайн и офлайн.",
-      "provider": { "@id": "https://example.ru/#organization" } },
+      "provider": { "@id": "https://haccpauditor.ru/#organization" } },
     { "@type": "Service", "position": 2, "name": "Оценка проекта на стадии проектирования",
       "description": "Проект предприятия с учётом санитарных норм, расстановка оборудования, технологическое сопровождение и план потоков." },
     { "@type": "Service", "position": 3, "name": "Внешний аудит онлайн и офлайн",
