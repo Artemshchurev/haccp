@@ -1,0 +1,134 @@
+/* ============ Shared legal pages stylesheet · haccpauditor.ru ============ */
+:root {
+  --bg-0: #FBFAF7;
+  --bg-1: #F4EEE3;
+  --bg-2: #FFFFFF;
+  --bg-3: #EBE3D2;
+  --gold: #DC6E58;
+  --gold-light: #EE9181;
+  --gold-dark: #A14935;
+  --text-primary: #2E2520;
+  --text-secondary: #5C4E44;
+  --text-muted: #948575;
+  --border-soft: rgba(46, 37, 32, 0.10);
+  --serif: 'Fraunces', 'Playfair Display', 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--bg-0);
+  color: var(--text-primary);
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+.legal-header {
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 0%, #FFDFD3 0%, transparent 60%),
+    var(--bg-0);
+  padding: 80px 0 48px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.legal-header .breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.legal-header .breadcrumb:hover { color: var(--gold-dark); }
+.legal-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.legal-header .lead {
+  color: var(--text-secondary);
+  font-size: 16px;
+  max-width: 640px;
+}
+.legal-meta {
+  margin-top: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.55);
+  padding: 8px 14px;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+}
+
+main.legal {
+  padding: 56px 0 96px;
+}
+main.legal section { margin-bottom: 36px; }
+main.legal h2 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 24px 0 14px;
+  color: var(--text-primary);
+}
+main.legal h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 18px 0 8px;
+  color: var(--text-primary);
+}
+main.legal p, main.legal li {
+  color: var(--text-secondary);
+  font-size: 15.5px;
+}
+main.legal p { margin-bottom: 14px; }
+main.legal ul, main.legal ol {
+  margin: 0 0 18px 22px;
+  display: grid;
+  gap: 8px;
+}
+main.legal a { color: var(--gold-dark); }
+main.legal a:hover { color: var(--gold); }
+main.legal strong { color: var(--text-primary); font-weight: 600; }
+
+.legal-notice {
+  background: var(--bg-1);
+  border: 1px dashed rgba(220, 110, 88, 0.40);
+  border-radius: 14px;
+  padding: 20px 22px;
+  font-size: 14px;
+  color: var(--gold-dark);
+  margin: 28px 0;
+}
+
+.legal-footer {
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-3) 100%);
+  padding: 40px 0 28px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-soft);
+}
+.legal-footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin: 0 8px;
+}
+.legal-footer a:hover { color: var(--gold-dark); }
+.legal-footer .copyright { margin-top: 14px; }
+
+@media (max-width: 720px) {
+  .legal-header { padding: 56px 0 32px; }
+  main.legal { padding: 36px 0 60px; }
+}
